@@ -40,6 +40,7 @@ namespace BasicForm.Entities
         {
             get { return $"{LastName} {FirstName}"; }
         }
+        public List<HistoryLeaning> ListHistoryLeaning { get; set; }
         /// <summary>
         /// Lấy toàn bộ ds sv có trong CSDL (Mock Data)
         /// </summary>
@@ -90,7 +91,10 @@ namespace BasicForm.Entities
             //return null;
             //cách Linq to SQL
             //SQL: Select * form Student where Id = '1'
+           
+ 
             var student = dbStudent.Where(s => s.Id == id).FirstOrDefault();
+            student.ListHistoryLeaning = HistoryLeaning.GetList(student.Id);
             return student;
         }
     }

@@ -39,14 +39,10 @@ namespace BasicForm
                 else
                     radioKhac.Checked = true;
             }
+            dataGridView1.DataSource = student.ListHistoryLeaning;
         }
 
         private void Formthongtin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
@@ -72,6 +68,39 @@ namespace BasicForm
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picAvatar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "File ảnh(png,jpg)|*.png;*jpg";
+            openFileDialog.Title = "Chọn ảnh đại diện";
+            var result = openFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                var fileName = openFileDialog.FileName;
+                pic.ImageLocation = fileName;
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpNgaySinh_ValueChanged(object sender, EventArgs e)
         {
 
         }
