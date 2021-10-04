@@ -20,7 +20,7 @@ namespace BaiTapLogin
         private void btDongy_Click(object sender, EventArgs e)
         {
             string id = "ndungithue";
-            string Password = "ABC@123";
+            string Password = "Abc@123";
             if (id.Equals(txtten.Text) && Password.Equals(txtmatkhau.Text))
             {
                 MessageBox.Show("Đăng nhập thành công");
